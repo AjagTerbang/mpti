@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>transaction</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list *ngIf="data">
+        <ion-item>
+            <ion-label>Invoice:</ion-label>
+            <ion-text>{{ this.data.invoice_checkout }}</ion-text>
+        </ion-item>
+        <ion-item>
+            <ion-label>Buku:</ion-label>
+            <ion-text>{{ this.data.idm_buku }}</ion-text>
+        </ion-item>
+        <ion-item>
+            <ion-label>Quantity:</ion-label>
+            <ion-text>{{ this.data.quantity_checkout }}</ion-text>
+        </ion-item>
+        <ion-item>
+            <ion-label>Total Harga:</ion-label>
+            <ion-text>{{ this.data.total_checkout }}</ion-text>
+        </ion-item>
+    </ion-list>
+    <br>
+    <!-- <ion-button expand="block" color="{{this.message.color}}" (click)="msg()">{{ message.status }}</ion-button> -->
+    <ion-button expand="block" (click)="done()">Pesanan sudah diterima</ion-button>
+</ion-content>
